@@ -1,4 +1,14 @@
 Abcsofmoney::Application.routes.draw do
+  get 'about' => 'pages#about'
+  get 'game' => 'pages#game'
+  get 'home' => 'pages#home'
+  get 'library' => 'pages#library'
+  get 'markets' => 'pages#markets'
+  get 'signup' => 'pages#signup'
+  get 'login' => 'pages#login'
+  get 'subject' => 'pages#subject'
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +58,7 @@ Abcsofmoney::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+
 
   # See how all your routes lay out with "rake routes"
 
