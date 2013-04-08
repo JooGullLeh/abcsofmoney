@@ -1,13 +1,24 @@
-$baseFontFamily: Playfair Display;
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+/*Button variables */
+	$btnPrimaryBackground: blue;
+
+/*Color Variables */
+	$abcgreen: #00AD7F;
+
+/*Font variables */
+	$baseFontFamily: 'Raleway',sans-serif;
+	@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+
+/*Nav Bar variables */	
+	$navbarBackgroundHighlight: white;
+	$navbarBackground:white;
+
 
 @import 'bootstrap';
+body{
+	padding-top:60px;
+}
+
 @import 'bootstrap-responsive';
-
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
-$btnPrimaryBackground: blue;
-
 .navbar-inner{
 	@include box-shadow(none !important);
 	border: 0;
@@ -20,4 +31,5 @@ $btnPrimaryBackground: blue;
 		color: $gray;
 	}
 }
+
 
