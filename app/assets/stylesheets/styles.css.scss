@@ -1,11 +1,12 @@
+$baseFontFamily: Playfair Display;
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+
 @import 'bootstrap';
-
-
 @import 'bootstrap-responsive';
 
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
-$btnPrimaryBackground: purple;
+$btnPrimaryBackground: blue;
 
 .navbar-inner{
 	@include box-shadow(none !important);
@@ -19,3 +20,4 @@ $btnPrimaryBackground: purple;
 		color: $gray;
 	}
 }
+
