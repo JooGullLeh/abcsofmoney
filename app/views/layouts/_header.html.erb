@@ -1,6 +1,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
+ 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         <span class="icon-bar"></span>
@@ -9,23 +10,34 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="http://theabcsofmoney.com">The ABC$ of Money</a>
+      <%= link_to "The ABC$ of Money", root_path, class: "brand" %>
  
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse">
       	<ul class="nav">
-					<li><%= link_to "Home", root_path %></li>
-					<li><%= link_to "About", about_path %></li>
-					<li><%= link_to "Markets", markets_path %></li>
-					<li><%= link_to "Library", library_path %></li>
-					<li><%= link_to "Game", game_path %></li>
-				</ul>
+      		<li ><a href='/about'>About Us</a></li>
+      		<li class = "dropdown"><%= link_to "Today's Markets", markets_path, class: "dropdown" %>
+      			<ul class="dropdown-menu">
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Another action</a></li>
+            </ul>
+          </li>
+          <li><%= link_to "Library", library_path %></li>
+          <li class = "dropdown"><%= link_to "Library", library_path, class: "dropdown" %>
+      			<ul class="dropdown-menu">
+              <li><a href="#">Glossary</a></li>
+              <li><a href="#">Subjects</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Game</a></li>
+        </ul>
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav pull-right">
-        	<li><%= link_to "Signup", signup_path %></li>
+       		<li><%= link_to "Signup", signup_path %></li>
 					<li><%= link_to "Login", login_path %></li>	
 				</ul>
       </div>
+ 
     </div>
   </div>
 </div>

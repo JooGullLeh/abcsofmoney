@@ -1,18 +1,36 @@
 /*Button variables */
-	$btnPrimaryBackground: blue;
+$btnPrimaryBackground: blue;
 
 /*Color Variables */
-	$abcgreen: #00AD7F;
+$abcgreen: #00AD7F;
+$navBarGray : #222;
 
 /*Font variables */
-	$baseFontFamily: 'Raleway',sans-serif;
-	@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
+$baseFontFamily: 'Raleway',sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,800);
 
 /*Nav Bar variables */	
-	$navbarBackgroundHighlight: white;
-	$navbarBackground:white;
+$navbarBackgroundHighlight: $navBarGray;
+$navbarBackground: $navBarGray;
 
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;    
+}
+a.menu:after, .dropdown-toggle:after {
+    content: none;
+}
 
+.hero-unit{
+	color: white;
+	background: #00AD7F; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #00AD7F 0%, #D7D6D1 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#00AD7F), color-stop(100%,#D7D6D1)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, $abcgreen 0%,#D7D6D1 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #00AD7F 0%,#D7D6D1 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #00AD7F 0%,#D7D6D1 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #00AD7F 0%,#D7D6D1 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020031', endColorstr='#D7D6D1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 @import 'bootstrap';
 body{
 	padding-top:60px;
@@ -23,9 +41,19 @@ body{
 	@include box-shadow(none !important);
 	border: 0;
 }
-
+.nav{
+	a{
+  	text-decoration: none;
+  	&:hover {
+  		text-decoration: green;
+  					}
+		}
+	}
 .footer{
-	margin-top:50px;
+	margin{
+		
+		bottom: 0px;
+	}
 	color: $grayLight;
 	a{
 		color: $gray;
