@@ -1,9 +1,40 @@
-<h1>Welcome to the ABC<small>$</small> of Money</h1>
-<p>
-	You've found the funnest way to overcome your 
-	<%= link_to "Financial Literacy" , "http://theabcsofmoney.com"%>!
-</p>
-<p>
-	<a href = "#"> Enroll Now!</a>
-</p>
+<% provide(:title, 'About Us') %>
 
+<h1 class="pageTitle"><%= yield(:title)%></h1>
+<div class="container-fluid">
+	<div class ="row-fluid">
+		<div class="span2"> <!--Left sidebar-->
+		</div>
+			<div class ="span10"> <!--main content-->
+				<p>
+					You've found the funnest way to overcome your 
+					<%= link_to "Financial Literacy" , "http://theabcsofmoney.com"%>!
+				</p>
+				<p>
+					<a href = "#"> Enroll Now!</a>
+				</p>
+			</div>
+		
+	</div>
+	<div class="bootstrap-2-column-sample-layouttpl container-fluid" 
+    id="main-content" role="main">
+
+<div class="portlet-layout row-fluid">
+    <div class="portlet-column portlet-column-last span4">
+    	<script>
+        $processor.processColumn("column-2", "portlet-column-content 
+            portlet-column-content-last")
+        </script>kkkkk
+    </div>
+    <div class="portlet-column portlet-column-first span8">
+    	<script>
+        $processor.processColumn("column-1", "portlet-column-content 
+            portlet-column-content-first")
+        </script>
+        laksjdf;lakjdf;a
+    </div>
+    
+</div><!--portlet-layout-->
+
+</div>
+</div>

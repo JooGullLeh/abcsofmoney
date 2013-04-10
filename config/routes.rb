@@ -1,4 +1,10 @@
 Abcsofmoney::Application.routes.draw do
+
+
+  devise_for :users
+
+  #devise_for :installs
+
   get 'about' => 'pages#about'
   get 'game' => 'pages#game'
   get 'home' => 'pages#home'

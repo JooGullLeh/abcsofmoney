@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
  
@@ -22,7 +22,6 @@
               <li><a href="#">Another action</a></li>
             </ul>
           </li>
-          <li><%= link_to "Library", library_path %></li>
           <li class = "dropdown"><%= link_to "Library", library_path, class: "dropdown" %>
       			<ul class="dropdown-menu">
               <li><a href="#">Glossary</a></li>
@@ -33,11 +32,18 @@
         </ul>
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav pull-right">
-       		<li><%= link_to "Signup", signup_path %></li>
-					<li><%= link_to "Login", login_path %></li>	
-				</ul>
+          <% if user_signed_in? %>
+            
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+       		 <li><%= link_to "Sign In", new_user_registration_path %></li>
+					 <li><%= link_to "Login", new_user_session_path %></li>	
+				  <% end %>
+        </ul>
       </div>
  
     </div>
   </div>
 </div>
+
